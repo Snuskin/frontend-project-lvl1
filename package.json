@@ -1,6 +1,5 @@
 {
   "name": "@hexlet/code",
-  "type": "module",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/Snuskin/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Snuskin/frontend-project-lvl1/actions)",
   "main": "index.js",
@@ -9,6 +8,7 @@
   },
   "repository": {
     "type": "git",
+    "type": "module",
     "url": "git+https://github.com/Snuskin/frontend-project-lvl1.git"
   },
   "author": "",
