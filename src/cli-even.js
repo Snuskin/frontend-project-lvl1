@@ -18,7 +18,7 @@ export const isNumberEven = () => {
         let userAnswer = readlineSync.question('Your answer: ');
  if (userAnswer !== rightAnswer) {
      rightAnswerCount = 0;
-     console.log("'" + userAnswer + "'" + " is wrong answer");
+     console.log("'" + userAnswer + "'" + " is wrong answer ;(. Correct answer was" + " " + "'" + rightAnswer + "'.");
      console.log("Let's try again," + ' ' + name + '!');
      break;
  }
