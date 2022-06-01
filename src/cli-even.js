@@ -20,11 +20,12 @@ export const isNumberEven = () => {
      rightAnswerCount = 0;
      console.log("'" + userAnswer + "'" + " is wrong answer");
      console.log("Let's try again," + ' ' + name + '!');
+     break;
  }
  else {
      rightAnswerCount += 1;
      console.log("Correct!");
+     console.log("Congratulations," + ' ' + name + '!');
  }
 }
-console.log("Congratulations," + ' ' + name + '!');
 }
