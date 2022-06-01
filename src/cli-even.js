@@ -6,7 +6,7 @@ export const isNumberEven = () => {
  console.log('Answer "yes" if the number is even, otherwise answer "no".')
  let rightAnswerCount = 0;
  while (rightAnswerCount < 3) {
-     const questNumber = Math.floor(Math.random() * (1000 - 1)) + 1;
+     const questNumber = Math.floor(Math.random() * (100 - 1)) + 1;
      let rightAnswer;
      if (questNumber % 2 === 0) {
          rightAnswer = 'yes';
@@ -14,8 +14,8 @@ export const isNumberEven = () => {
         else {
             rightAnswer = 'no';
         }
-        const userAnswer = readlineSync.question('Question:' + " " + questNumber + " ");
- 
+        console.log('Question:' + " " + questNumber + " ");
+        let userAnswer = readlineSync.question('Your answer: ');
  if (userAnswer !== rightAnswer) {
      rightAnswerCount = 0;
      console.log("'" + userAnswer + "'" + " is wrong answer");
@@ -25,7 +25,10 @@ export const isNumberEven = () => {
  else {
      rightAnswerCount += 1;
      console.log("Correct!");
-     console.log("Congratulations," + ' ' + name + '!');
+     
  }
+}
+if (rightAnswerCount === 3) {
+    console.log("Congratulations," + ' ' + name + '!');
 }
 }
