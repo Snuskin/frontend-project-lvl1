@@ -3,3 +3,4 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 https://asciinema.org/a/9DYsskGkHp1dsLqVki7ABrtbQ
 https://asciinema.org/a/PJCxqNjWQkdNToVVRwE4dMXB4
+https://asciinema.org/a/UsrztjYx8M5BKFWbYmABWCoEC
