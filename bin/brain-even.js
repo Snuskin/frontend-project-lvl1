@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-import { isNumberEven } from "../src/cli-even.js";
-isNumberEven ();
+import { currLogic } from "../src/games/cli-even.js";
+currLogic();

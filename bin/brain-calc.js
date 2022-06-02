@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-import { calculator } from "../src/cli-calc.js";
-calculator ();
+import { currLogic } from "../src/games/cli-calc.js";
+currLogic ();
