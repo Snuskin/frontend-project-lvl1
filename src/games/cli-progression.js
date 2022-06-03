@@ -2,12 +2,12 @@ import { mainLogic } from '../index.js';
 
 const introduction = 'What number is missing in the progression?';
 const progressionArrayGenerate = (firstNumber, difference) => {
- const progressionArray = [];
- progressionArray.push(firstNumber);
- for (let i = 0; i <= 10; i ++) {
+  const progressionArray = [];
+  progressionArray.push(firstNumber);
+  for (let i = 0; i <= 10; i++) {
     progressionArray.push(progressionArray[i] + difference);
- }
- return progressionArray;
+  }
+  return progressionArray;
 };
 
 export const content = () => {
@@ -16,7 +16,7 @@ export const content = () => {
   const finalArr = progressionArrayGenerate(firstNumber, difference);
   const index = Math.floor(Math.random() * (10 - 1)) + 1;
   const rightAnswer = `${finalArr[index]}`;
-  finalArr[index] = `..`;
+  finalArr[index] = '..';
   const question = finalArr.join(' ');
   return [question, rightAnswer];
 };

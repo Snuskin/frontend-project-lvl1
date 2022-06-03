@@ -1,5 +1,5 @@
 import { mainLogic } from '../index.js';
-    
+
 const introduction = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (questNumber) => {
   if (questNumber < 2) {
@@ -11,7 +11,7 @@ const isPrime = (questNumber) => {
       return false;
     }
   }
-    return true;
+  return true;
 };
 
 export const content = () => {
