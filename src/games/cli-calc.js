@@ -1,3 +1,4 @@
+/* eslint-disable arrow-body-style */
 import { mainLogic } from '../index.js';
 
 const introduction = 'What is the result of the expression?';
@@ -11,6 +12,8 @@ const calculate = (firstNumber, operand, secondNumber) => {
       return firstNumber - secondNumber;
     case '*':
       return firstNumber * secondNumber;
+    default:
+      return null;
   }
 };
 

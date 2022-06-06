@@ -4,7 +4,7 @@ const introduction = 'What number is missing in the progression?';
 const progressionArrayGenerate = (firstNumber, difference) => {
   const progressionArray = [];
   progressionArray.push(firstNumber);
-  for (let i = 0; i <= 10; i = i + 1) {
+  for (let i = 0; i <= 10; i += 1) {
     progressionArray.push(progressionArray[i] + difference);
   }
   return progressionArray;
