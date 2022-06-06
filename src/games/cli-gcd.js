@@ -1,4 +1,4 @@
-import { mainLogic } from '../index.js';
+import mainLogic from '../index.js';
 
 const introduction = 'Find the greatest common divisor of given numbers.';
 const greatestCommonDivisor = (firstNumber, secondNumber) => {
