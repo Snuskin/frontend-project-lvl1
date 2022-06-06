@@ -19,4 +19,4 @@ export default function mainLogic(introduction, content) {
     console.log('Correct!');
   }
   return console.log(`Congratulations, ${userName}!`);
-};
+}
