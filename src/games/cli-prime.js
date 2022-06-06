@@ -1,6 +1,6 @@
 import mainLogic from '../index.js';
 
-const introduction = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (questNumber) => {
   if (questNumber < 2) {
     return false;
@@ -14,11 +14,11 @@ const isPrime = (questNumber) => {
   return true;
 };
 
-export const content = () => {
+export const conductGame = () => {
   const questNumber = Math.floor(Math.random() * (100 - 1)) + 1;
   const question = `${questNumber}`;
   const rightAnswer = isPrime(questNumber) ? 'yes' : 'no';
   return [question, rightAnswer];
 };
 
-export const currLogic = () => mainLogic(introduction, content);
+export const startGame = () => mainLogic(description, conductGame);

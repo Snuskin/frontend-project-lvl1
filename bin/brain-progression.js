@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { currLogic } from '../src/games/cli-progression.js';
+import { startGame } from '../src/games/cli-progression.js';
 
-currLogic();
+startGame();

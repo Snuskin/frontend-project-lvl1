@@ -1,6 +1,6 @@
 import mainLogic from '../index.js';
 
-const introduction = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 const progressionArrayGenerate = (firstNumber, difference) => {
   const progressionArray = [];
   progressionArray.push(firstNumber);
@@ -10,7 +10,7 @@ const progressionArrayGenerate = (firstNumber, difference) => {
   return progressionArray;
 };
 
-export const content = () => {
+export const conductGame = () => {
   const firstNumber = Math.floor(Math.random() * (10 - 1)) + 1;
   const difference = Math.floor(Math.random() * (10 - 1)) + 1;
   const finalArr = progressionArrayGenerate(firstNumber, difference);
@@ -21,4 +21,4 @@ export const content = () => {
   return [question, rightAnswer];
 };
 
-export const currLogic = () => mainLogic(introduction, content);
+export const startGame = () => mainLogic(description, conductGame);

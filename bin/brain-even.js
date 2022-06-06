@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { currLogic } from '../src/games/cli-even.js';
+import { startGame } from '../src/games/cli-even.js';
 
-currLogic();
+startGame();

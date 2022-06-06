@@ -1,7 +1,7 @@
 /* eslint-disable arrow-body-style */
 import mainLogic from '../index.js';
 
-const introduction = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const arrOfOperands = ['+', '-', '*'];
 const calculate = (firstNumber, operand, secondNumber) => {
@@ -17,7 +17,7 @@ const calculate = (firstNumber, operand, secondNumber) => {
   }
 };
 
-export const content = () => {
+export const conductGame = () => {
   const firstNumber = Math.floor(Math.random() * (100 - 1)) + 1;
   const secondNumber = Math.floor(Math.random() * (100 - 1)) + 1;
   const operand = arrOfOperands[Math.floor(Math.random() * arrOfOperands.length)];
@@ -26,4 +26,4 @@ export const content = () => {
   return [question, rightAnswer];
 };
 
-export const currLogic = () => mainLogic(introduction, content);
+export const startGame = () => mainLogic(description, conductGame);
