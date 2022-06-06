@@ -1,4 +1,4 @@
-import mainLogic from '../index.js';
+import { mainLogic } from '../index.js';
 
 const introduction = 'What number is missing in the progression?';
 const progressionArrayGenerate = (firstNumber, difference) => {

@@ -1,4 +1,4 @@
-import mainLogic from '../index.js';
+import { mainLogic } from '../index.js';
 
 const introduction = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (questNumber) => {

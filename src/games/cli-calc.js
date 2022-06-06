@@ -1,4 +1,4 @@
-import mainLogic from '../index.js';
+import mainLogic  from '../index.js';
 
 const introduction = 'What is the result of the expression?';
 

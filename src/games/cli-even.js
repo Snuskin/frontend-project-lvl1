@@ -1,4 +1,4 @@
-import mainLogic from '../index.js';
+import { mainLogic } from '../index.js';
 
 const introduction = 'Answer "yes" if the number is even, otherwise answer "no".';
 const isNumEven = (questNumber) => questNumber % 2 === 0;

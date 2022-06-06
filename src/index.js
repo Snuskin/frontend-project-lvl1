@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export default mainLogic = (introduction, content) => {
+export const mainLogic = (introduction, content) => {
   const rightAnswerCount = 3;
 
   console.log('Welcome to the Brain Games!');
