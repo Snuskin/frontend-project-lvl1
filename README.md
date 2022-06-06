@@ -14,6 +14,13 @@ Welcome to my first project.  This repository consists of several arithmetic con
 
 **For running the games do this actions:**
 
+1. Check the current updates for database with available packages: enter command line apt update
+2. Install Node.js package: enter command line apt install nodejs
+3. Upgrade Node.js to the latest version: enter command line apt upgrade nodejs
+4. To allow you to install modules and packages with Node.js, install npm package: enter command line apt install npm
+5. Add and check depencies: enter command line make install
+6. Run games: enter command line make game name
+
 # Game List:
 
 1. **brain-games** - game with introduction
