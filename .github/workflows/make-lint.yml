@@ -6,6 +6,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
-      run: yarn
-    - name: make-lint
-      run: npx eslint . --ext .js,.jsx,.ts,.tsx
+       - name: Use Node.js ${{ matrix.node-version }}
+        
+        
+        uses: actions/setup-node@v2
+        
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: make install
+      - run: make lint
+      - run: make lint-fix
