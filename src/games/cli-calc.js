@@ -1,10 +1,9 @@
-/* eslint-disable arrow-body-style */
-import mainLogic from '../index.js';
+import run, { generateNumber } from '../index.js';
 
 const description = 'What is the result of the expression?';
-
-const arrOfOperands = ['+', '-', '*'];
-const calculate = (firstNumber, operand, secondNumber) => {
+const [firstNumber, secondNumber] = generateNumber();
+const operands = ['+', '-', '*'];
+const calculate = (operand) => {
   switch (operand) {
     case '+':
       return firstNumber + secondNumber;
@@ -13,17 +12,15 @@ const calculate = (firstNumber, operand, secondNumber) => {
     case '*':
       return firstNumber * secondNumber;
     default:
-      return null;
+      throw new Error(`Unknown operand: '${operand}'!`);
   }
 };
 
-export const conductGame = () => {
-  const firstNumber = Math.floor(Math.random() * (100 - 1)) + 1;
-  const secondNumber = Math.floor(Math.random() * (100 - 1)) + 1;
-  const operand = arrOfOperands[Math.floor(Math.random() * arrOfOperands.length)];
+export const generateNewRound = () => {
+  const operand = operands[Math.floor(Math.random() * operands.length)];
   const question = `${firstNumber} ${operand} ${secondNumber}`;
   const rightAnswer = `${calculate(firstNumber, operand, secondNumber)}`;
   return [question, rightAnswer];
 };
 
-export const startGame = () => mainLogic(description, conductGame);
+export const startGame = () => run(description, generateNewRound);

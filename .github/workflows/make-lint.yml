@@ -6,7 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
-      run: yarn
+      run: make install
     - name: make-lint
       run: make lint 
       

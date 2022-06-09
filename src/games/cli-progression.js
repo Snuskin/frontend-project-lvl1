@@ -1,7 +1,8 @@
-import mainLogic from '../index.js';
+import run, { generateNumber } from '../index.js';
 
+const [firstNumber] = generateNumber();
 const description = 'What number is missing in the progression?';
-const progressionArrayGenerate = (firstNumber, difference) => {
+const progressionArrayGenerate = (difference) => {
   const progressionArray = [];
   progressionArray.push(firstNumber);
   for (let i = 0; i <= 10; i += 1) {
@@ -10,15 +11,18 @@ const progressionArrayGenerate = (firstNumber, difference) => {
   return progressionArray;
 };
 
-export const conductGame = () => {
-  const firstNumber = Math.floor(Math.random() * (10 - 1)) + 1;
+export const generateNewRound = () => {
   const difference = Math.floor(Math.random() * (10 - 1)) + 1;
-  const finalArr = progressionArrayGenerate(firstNumber, difference);
+  const preFinalArr = progressionArrayGenerate(firstNumber, difference);
   const index = Math.floor(Math.random() * (10 - 1)) + 1;
-  const rightAnswer = `${finalArr[index]}`;
-  finalArr[index] = '..';
-  const question = finalArr.join(' ');
+  const rightAnswer = `${preFinalArr[index]}`;
+  const FinalArr = [
+    ...preFinalArr.slice(0, preFinalArr.indexOf(preFinalArr[index])),
+    '..',
+    ...preFinalArr.slice(preFinalArr.indexOf(preFinalArr[index]) + 1),
+  ];
+  const question = FinalArr.join(' ');
   return [question, rightAnswer];
 };
 
-export const startGame = () => mainLogic(description, conductGame);
+export const startGame = () => run(description, generateNewRound);

@@ -1,13 +1,13 @@
-import mainLogic from '../index.js';
+import run, { generateNumber } from '../index.js';
 
+const [firstNumber] = generateNumber();
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
-const isNumEven = (questNumber) => questNumber % 2 === 0;
+const isNumEven = () => firstNumber % 2 === 0;
 
-export const conductGame = () => {
-  const questNumber = Math.floor(Math.random() * (100 - 1)) + 1;
-  const question = `${questNumber}`;
-  const rightAnswer = isNumEven(questNumber) ? 'yes' : 'no';
+export const generateNewRound = () => {
+  const question = `${firstNumber}`;
+  const rightAnswer = isNumEven(firstNumber) ? 'yes' : 'no';
   return [question, rightAnswer];
 };
 
-export const startGame = () => mainLogic(description, conductGame);
+export const startGame = () => run(description, generateNewRound);
