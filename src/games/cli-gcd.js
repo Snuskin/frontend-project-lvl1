@@ -1,8 +1,7 @@
 import run, { generateNumber } from '../index.js';
 
-const [firstNumber, secondNumber] = generateNumber();
 const description = 'Find the greatest common divisor of given numbers.';
-const greatestCommonDivisor = () => {
+const greatestCommonDivisor = (firstNumber, secondNumber) => {
   if (!secondNumber) {
     return firstNumber;
   }
@@ -11,6 +10,7 @@ const greatestCommonDivisor = () => {
 };
 
 export const generateNewRound = () => {
+  const [firstNumber, secondNumber] = generateNumber();
   const question = `${firstNumber} ${secondNumber}`;
   const rightAnswer = `${greatestCommonDivisor(firstNumber, secondNumber)}`;
   return [question, rightAnswer];

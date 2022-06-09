@@ -1,9 +1,8 @@
 import run, { generateNumber } from '../index.js';
 
 const description = 'What is the result of the expression?';
-const [firstNumber, secondNumber] = generateNumber();
 const operands = ['+', '-', '*'];
-const calculate = (operand) => {
+const calculate = (firstNumber, secondNumber, operand) => {
   switch (operand) {
     case '+':
       return firstNumber + secondNumber;
@@ -12,14 +11,15 @@ const calculate = (operand) => {
     case '*':
       return firstNumber * secondNumber;
     default:
-      throw new Error(`Unknown operand: '${operand}'!`);
+      return `Unknown operand: '${operand}'!`;
   }
 };
 
 export const generateNewRound = () => {
+  const [firstNumber, secondNumber] = generateNumber();
   const operand = operands[Math.floor(Math.random() * operands.length)];
   const question = `${firstNumber} ${operand} ${secondNumber}`;
-  const rightAnswer = `${calculate(firstNumber, operand, secondNumber)}`;
+  const rightAnswer = `${calculate(firstNumber, secondNumber, operand)}`;
   return [question, rightAnswer];
 };
 

@@ -1,8 +1,7 @@
 import run, { generateNumber } from '../index.js';
 
-const [firstNumber] = generateNumber();
 const description = 'What number is missing in the progression?';
-const progressionArrayGenerate = (difference) => {
+const progressionArrayGenerate = (firstNumber, difference) => {
   const progressionArray = [];
   progressionArray.push(firstNumber);
   for (let i = 0; i <= 10; i += 1) {
@@ -10,8 +9,8 @@ const progressionArrayGenerate = (difference) => {
   }
   return progressionArray;
 };
-
 export const generateNewRound = () => {
+  const [firstNumber] = generateNumber();
   const difference = Math.floor(Math.random() * (10 - 1)) + 1;
   const preFinalArr = progressionArrayGenerate(firstNumber, difference);
   const index = Math.floor(Math.random() * (10 - 1)) + 1;

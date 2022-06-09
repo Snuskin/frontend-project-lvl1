@@ -1,8 +1,7 @@
 import run, { generateNumber } from '../index.js';
 
-const [firstNumber] = generateNumber();
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const isPrime = () => {
+const isPrime = (firstNumber) => {
   if (firstNumber < 2) {
     return false;
   }
@@ -16,6 +15,7 @@ const isPrime = () => {
 };
 
 export const generateNewRound = () => {
+  const [firstNumber] = generateNumber();
   const question = `${firstNumber}`;
   const rightAnswer = isPrime(firstNumber) ? 'yes' : 'no';
   return [question, rightAnswer];
