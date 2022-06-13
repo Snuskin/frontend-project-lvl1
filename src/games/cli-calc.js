@@ -1,4 +1,5 @@
-import run, { generateNumber } from '../index.js';
+import run from '../index.js';
+import generateNumber from '../utils.js';
 
 const description = 'What is the result of the expression?';
 const operands = ['+', '-', '*'];
@@ -17,9 +18,11 @@ const calculate = (firstNumber, secondNumber, operand) => {
 
 export const generateNewRound = () => {
   const [firstNumber, secondNumber] = generateNumber();
-  const operand = operands[Math.floor(Math.random() * operands.length)];
+  const [, , , , operandIndex] = generateNumber();
+  const operand = operands[operandIndex];
   const question = `${firstNumber} ${operand} ${secondNumber}`;
-  const rightAnswer = `${calculate(firstNumber, secondNumber, operand)}`;
+  const calculateResult = calculate(firstNumber, secondNumber, operand);
+  const rightAnswer = calculateResult.toString();
   return [question, rightAnswer];
 };
 

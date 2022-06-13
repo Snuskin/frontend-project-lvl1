@@ -1,4 +1,5 @@
-import run, { generateNumber } from '../index.js';
+import run from '../index.js';
+import generateNumber from '../utils.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (firstNumber) => {
