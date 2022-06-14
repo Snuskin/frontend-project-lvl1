@@ -11,10 +11,10 @@ const createProgression = (firstNumber, maxProgrLength, difference) => {
 };
 export const generateNewRound = () => {
   const firstNumber = generateNumber(0, 100);
-  const difference = generateNumber(0, 20);
+  const difference = generateNumber(1, 20);
   const maxProgrLength = generateNumber(5, 9);
   const calculatedProgression = createProgression(firstNumber, maxProgrLength, difference);
-  const index = generateNumber(0, 10);
+  const index = generateNumber(0, maxProgrLength);
   const hiddenNumber = calculatedProgression.splice(index, 1, '..');
   const rightAnswer = String(hiddenNumber);
   const question = calculatedProgression.join(' ');
