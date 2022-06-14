@@ -17,9 +17,9 @@ const calculate = (firstNumber, secondNumber, operand) => {
 };
 
 export const generateNewRound = () => {
-  const [firstNumber, secondNumber] = generateNumber();
-  const [, , , , operandIndex] = generateNumber();
-  const operand = operands[operandIndex];
+  const firstNumber = generateNumber(0, 100);
+  const secondNumber = generateNumber(0, 100);
+  const operand = operands[generateNumber(0, operands.length - 1)];
   const question = `${firstNumber} ${operand} ${secondNumber}`;
   const calculateResult = calculate(firstNumber, secondNumber, operand);
   const rightAnswer = calculateResult.toString();

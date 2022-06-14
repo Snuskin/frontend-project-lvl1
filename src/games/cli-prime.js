@@ -16,8 +16,8 @@ const isPrime = (firstNumber) => {
 };
 
 export const generateNewRound = () => {
-  const [firstNumber] = generateNumber();
-  const question = `${firstNumber}`;
+  const firstNumber = generateNumber(0, 100);
+  const question = String(firstNumber);
   const rightAnswer = isPrime(firstNumber) ? 'yes' : 'no';
   return [question, rightAnswer];
 };

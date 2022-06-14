@@ -11,7 +11,8 @@ const getCommonDivisor = (firstNumber, secondNumber) => {
 };
 
 export const generateNewRound = () => {
-  const [firstNumber, secondNumber] = generateNumber();
+  const firstNumber = generateNumber(0, 100);
+  const secondNumber = generateNumber(0, 100);
   const question = `${firstNumber} ${secondNumber}`;
   const rightAnswer = `${getCommonDivisor(firstNumber, secondNumber)}`;
   return [question, rightAnswer];
