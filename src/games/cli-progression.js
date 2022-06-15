@@ -3,11 +3,11 @@ import generateNumber from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 const createProgression = (firstNumber, maxProgrLength, difference) => {
-  const progressionArray = [];
+  const progression = [];
   for (let i = 0; i <= maxProgrLength; i += 1) {
-    progressionArray.push(firstNumber + i * difference);
+    progression.push(firstNumber + i * difference);
   }
-  return progressionArray;
+  return progression;
 };
 export const generateNewRound = () => {
   const firstNumber = generateNumber(0, 100);

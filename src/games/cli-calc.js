@@ -21,8 +21,7 @@ export const generateNewRound = () => {
   const secondNumber = generateNumber(0, 100);
   const operand = operands[generateNumber(0, operands.length - 1)];
   const question = `${firstNumber} ${operand} ${secondNumber}`;
-  const calculateResult = calculate(firstNumber, secondNumber, operand);
-  const rightAnswer = calculateResult.toString();
+  const rightAnswer = calculate(firstNumber, secondNumber, operand).toString();
   return [question, rightAnswer];
 };
 
